@@ -10,6 +10,9 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    
+    commontator_thread_show(@blog)
+    
   end
 
   # GET /blogs/new

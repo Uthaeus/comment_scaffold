@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   validates_presence_of :name, :email
 
-
+  acts_as_commontator
 end
