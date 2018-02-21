@@ -56,7 +56,7 @@ gem 'acts_as_votable', '~> 0.11.1'
 gem 'bootstrap', '~> 4.0'
 gem 'sprockets', '~> 3.7', '>= 3.7.1'
 gem 'sprockets-es6', '~> 0.9.2'
-gem "simple_calendar", "~> 2.0"
+gem 'simple_calendar', '~> 2.2', '>= 2.2.7'
 
 
 
