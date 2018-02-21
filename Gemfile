@@ -53,6 +53,10 @@ gem 'devise', '~> 4.4'
 gem 'commontator', '~> 5.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'acts_as_votable', '~> 0.11.1'
+gem 'bootstrap', '~> 4.0'
+gem 'sprockets', '~> 3.7', '>= 3.7.1'
+gem 'sprockets-es6', '~> 0.9.2'
+gem "simple_calendar", "~> 2.0"
 
 
 
