@@ -1,0 +1,9 @@
+<div class="form-group nested-fields">
+  <%= f.label :verb %>
+  <%= f.text_field :verb, class: 'form-control', placeholder: 'Enter VERB here' %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body, class: 'form-control', placeholder: 'Enter instruction here' %>
+
+  <%= link_to_remove_association 'Remove Instruction', f, class: 'btn btn-outline-danger btn-sm' %>
+</div>

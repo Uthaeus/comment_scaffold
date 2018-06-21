@@ -15,9 +15,18 @@
   <%= @recipe.body %>
 </p>
 
+<% @recipe.instructions.each do |ins| %>
+  <div class="card">
+    <p><%= ins.verb %></p>
+    <p><%= ins.body %></p>
+  </div>
+<% end %>
+
 <% @recipe.ingredients.each do |i| %>
-  <p><%= i.title %></p>
-  <p><%= i.amount %></p>
+  <div class="card">
+    <p><%= i.title %></p>
+    <p><%= i.amount %></p>
+  </div>
 <% end %>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
