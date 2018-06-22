@@ -1,33 +1,33 @@
-
-
-<p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
-</p>
-
-<p>
-  <strong>Subtitle:</strong>
-  <%= @recipe.subtitle %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @recipe.body %>
-</p>
-
-<% @recipe.instructions.each do |ins| %>
-  <div class="card">
-    <p><%= ins.verb %></p>
-    <p><%= ins.body %></p>
+<div>
+  <div class="row">
+    <div class="col-md-4">
+      <h3><%= @recipe.title %></h3>
+      <h5><%= @recipe.subtitle %></h5>
+    </div>
+    <div class="col-md-8">
+      <p><%= @recipe.body %></p>
+    </div>
   </div>
-<% end %>
 
-<% @recipe.ingredients.each do |i| %>
-  <div class="card">
-    <p><%= i.title %></p>
-    <p><%= i.amount %></p>
+  <div class="row">
+    <div class="col-md-6">
+      <% @recipe.ingredients.each do |i| %>
+        <div class="card">
+          <h4><%= i.title %></h4>
+          <h6><%= i.amount %></h6>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <% @recipe.instructions.each do |ins| %>
+        <div class="card">
+          <h4><%= ins.verb %></h4>
+          <p><%= ins.body %></p>
+        </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
