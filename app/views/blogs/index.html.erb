@@ -1,31 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="container large-marg">
 
-<h1>Blogs</h1>
+  <h1>Blogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.date %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+  <div class="marg">
+    <%= link_to 'Create New Blog', new_blog_path, class: 'btn btn-light' %>
+  </div>
+  
+  <% @blogs.each do |blog| %>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card marg small-padd">
+          <%= link_to blog.title, blog %>
+          <small>Created <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</small>
+          <br />
+          <hr />
+          <%= blog.body %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
