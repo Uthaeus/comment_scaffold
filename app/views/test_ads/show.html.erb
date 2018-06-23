@@ -1,4 +1,4 @@
-<div class="card ad-background" background-image="<%= @test_ad.image %>">
+<div class="card ad-background">
   <div class="row">
     <div class="col-md-4">
       <h3 class="text-right">
@@ -13,6 +13,7 @@
   </div>
 </div>
 
-
-<%= link_to 'Edit', edit_test_ad_path(@test_ad), class: 'btn btn-light' %> |
-<%= link_to 'Back', test_ads_path, class: 'btn btn-light' %>
+<div class="marg">
+  <%= link_to 'Edit', edit_test_ad_path(@test_ad), class: 'btn btn-light' %> |
+  <%= link_to 'Back', test_ads_path, class: 'btn btn-light' %>
+</div>
