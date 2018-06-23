@@ -27,7 +27,7 @@ module ApplicationHelper
       {
         url: blogs_path,
         title: 'Blogs'
-      }
+      },
       {
         url: recipes_path,
         title: 'Recipes'
