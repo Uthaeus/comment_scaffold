@@ -26,6 +26,9 @@
 }
 
 
-/*.ad-background {
-  background-image: url("");
-}*/
+.ad-background {
+  min-width: 800px;
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

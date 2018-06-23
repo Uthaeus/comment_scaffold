@@ -1,2 +1,25 @@
-<h1>Homepage</h1>
+<div class="container">
+  <div class="home-ad">
+    <p>
+      <%= link_to @advert do %>
+        <%= render 'test_ads/ad' %>
+      <% end %>
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Homepage</h2>
+    </div>
+    <div class="col-md-4">
+      <% @recipes.each do |recipe| %>
+        <%= link_to recipe do %>
+          <div class="card marg small-padd">
+            <%= recipe.title %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 

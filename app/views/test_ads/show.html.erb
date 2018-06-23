@@ -1,22 +1,21 @@
-<div class="card ad-background" style="background-image: url(/assets/<%= @test_ad.image.url %>)">
-  <div class="row">
-    <div class="col-md-4">
-      <h3 class="text-right">
-        <%= @test_ad.title %>
-      </h3>
-    </div>
-    <div class="col-md-8">
-      <p>
-        <%= @test_ad.body %>
-      </p>
-      <p>
-        <%= @test_ad.image %>
-      </p>
+<div class="container">
+  <div class="card large-marg ad-background" style="background-image: url(<%= @test_ad.image %>);">
+    <div class="row">
+      <div class="col-md-4">
+        <h3 class="text-right">
+          <%= @test_ad.title %>
+        </h3>
+      </div>
+      <div class="col-md-8">
+        <p>
+          <%= @test_ad.body %>
+        </p>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="marg">
-  <%= link_to 'Edit', edit_test_ad_path(@test_ad), class: 'btn btn-light' %> |
-  <%= link_to 'Back', test_ads_path, class: 'btn btn-light' %>
+  <div class="marg">
+    <%= link_to 'Edit', edit_test_ad_path(@test_ad), class: 'btn btn-light' %> |
+    <%= link_to 'Back', test_ads_path, class: 'btn btn-light' %>
+  </div>
 </div>
