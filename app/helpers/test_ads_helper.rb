@@ -1,0 +1,2 @@
+module TestAdsHelper
+end
