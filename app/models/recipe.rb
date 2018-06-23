@@ -2,6 +2,9 @@ class Recipe < ApplicationRecord
   has_many :ingredients
   has_many :instructions
 
+  mount_uploader :thumb_image, RecipeUploader
+  mount_uploader :main_image, RecipeUploader
+
   accepts_nested_attributes_for :ingredients,
                                 allow_destroy: true,
                                 reject_if: lambda { |attrs| attrs['title'].blank? }

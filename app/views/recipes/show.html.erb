@@ -4,9 +4,12 @@
       <div class="col-md-4">
         <h3><%= @recipe.title %></h3>
         <h5><%= @recipe.subtitle %></h5>
+        <p><%= image_tag recipe_img(@recipe.thumb_image, 'thumb') %></p>
       </div>
       <div class="col-md-8">
+        <p><%= image_tag recipe_img(@recipe.main_image, 'main') %></p>
         <p><%= @recipe.body %></p>
+
       </div>
     </div>
 
