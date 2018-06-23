@@ -31,6 +31,10 @@ module ApplicationHelper
       {
         url: recipes_path,
         title: 'Recipes'
+      },
+      {
+        url: test_ads_path,
+        title: 'Ads'
       }
     ]
   end
