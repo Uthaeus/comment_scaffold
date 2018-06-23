@@ -1,5 +1,5 @@
 <div>
-  <div class="row">
+  <div class="row marg">
     <div class="col-md-4">
       <h3><%= @recipe.title %></h3>
       <h5><%= @recipe.subtitle %></h5>
@@ -9,10 +9,10 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row marg">
     <div class="col-md-6">
       <% @recipe.ingredients.each do |i| %>
-        <div class="card">
+        <div class="card small-marg small-padd">
           <h4><%= i.title %></h4>
           <h6><%= i.amount %></h6>
         </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-6">
       <% @recipe.instructions.each do |ins| %>
-        <div class="card">
+        <div class="card small-marg small-padd">
           <h4><%= ins.verb %></h4>
           <p><%= ins.body %></p>
         </div>
@@ -29,5 +29,7 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+<div class="marg">
+  <%= link_to 'Edit', edit_recipe_path(@recipe), class: 'btn btn-light' %> |
+  <%= link_to 'Back', recipes_path, class: 'btn btn-light' %>
+</div>
