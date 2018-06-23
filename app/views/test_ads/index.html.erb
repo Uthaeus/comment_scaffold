@@ -1,31 +1,19 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Test Ads</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @test_ads.each do |test_ad| %>
-      <tr>
-        <td><%= test_ad.title %></td>
-        <td><%= test_ad.body %></td>
-        <td><%= test_ad.image %></td>
-        <td><%= link_to 'Show', test_ad %></td>
-        <td><%= link_to 'Edit', edit_test_ad_path(test_ad) %></td>
-        <td><%= link_to 'Destroy', test_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="container large-marg">
+  <h1>Test Ads</h1>
+  <% @test_ads.each do |test_ad| %>
+    <%= link_to test_ad do %>
+      <div class="card marg recipe_index" style="background-image: url(<%= test_ad.image %>);">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <%= test_ad.title %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  <% end %>
 
-<br>
-
-<%= link_to 'New Test Ad', new_test_ad_path %>
+  <div class="marg">
+    <%= link_to 'New Test Ad', new_test_ad_path, class: 'btn btn-light' %>
+  </div>
+</div>

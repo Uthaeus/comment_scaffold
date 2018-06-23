@@ -8,7 +8,8 @@
 
       <div class="marg">
         <%= link_to 'Show', @test_ad, class: 'btn btn-light' %> |
-        <%= link_to 'Back', test_ads_path, class: 'btn btn-light' %>
+        <%= link_to 'Back', test_ads_path, class: 'btn btn-light' %> |
+        <%= link_to 'Delete', @test_ad, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-light' %>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@
     <div class="col-md-4">
       <% @recipes.each do |recipe| %>
         <%= link_to recipe do %>
-          <div class="card marg small-padd">
+          <div class="card marg small-padd recipe_home" style="background-image: url(<%= recipe.main_image %>);">
             <%= recipe.title %>
           </div>
         <% end %>
