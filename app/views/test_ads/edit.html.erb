@@ -1,6 +1,15 @@
-<h1>Editing Test Ad</h1>
 
-<%= render 'form', test_ad: @test_ad %>
+<div class="container large-marg">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Editing Test Ad</h1>
 
-<%= link_to 'Show', @test_ad %> |
-<%= link_to 'Back', test_ads_path %>
+      <%= render 'form', test_ad: @test_ad %>
+
+      <div class="marg">
+        <%= link_to 'Show', @test_ad, class: 'btn btn-light' %> |
+        <%= link_to 'Back', test_ads_path, class: 'btn btn-light' %>
+      </div>
+    </div>
+  </div>
+</div>

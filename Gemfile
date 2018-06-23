@@ -53,6 +53,10 @@ gem 'devise', '~> 4.4'
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'dotenv-rails', '~> 2.5'
 
 
 

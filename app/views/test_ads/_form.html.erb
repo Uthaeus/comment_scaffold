@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: test_ad, local: true) do |form| %>
   <% if test_ad.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +13,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :test_ad_title %>
+    <%= form.text_field :title, id: :test_ad_title, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :test_ad_body %>
+    <%= form.text_area :body, id: :test_ad_body, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :test_ad_image %>
+  <div class="form-group">
+    <label class="btn btn-outline-primary">
+      Upload Image<%= form.file_field :image, id: :test_ad_image, class: 'form-control', style: 'display:none;' %>
+    </label>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit 'Save Form', class: 'btn btn-outline-secondary' %>
   </div>
 <% end %>
+

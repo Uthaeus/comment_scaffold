@@ -1,4 +1,4 @@
-<div class="card ad-background">
+<div class="card ad-background" style="background-image: url(/assets/<%= @test_ad.image.url %>)">
   <div class="row">
     <div class="col-md-4">
       <h3 class="text-right">
@@ -8,6 +8,9 @@
     <div class="col-md-8">
       <p>
         <%= @test_ad.body %>
+      </p>
+      <p>
+        <%= @test_ad.image %>
       </p>
     </div>
   </div>
