@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="card marg small-padd">
-          <%= link_to blog.title, blog %>
+          <h3 class="title-font"><%= link_to blog.title, blog %></h3>
           <small>Created <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</small>
           <br />
           <hr />
